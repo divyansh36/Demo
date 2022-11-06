@@ -5,6 +5,7 @@ pipeline{
   }
   parameters{
     string(name:'Version', defaultValue:'', description:'dep')
+    choice(name:'Version', choices:['12.1','12.2','12.3'], description:'dep')
   }
   tools{
   gradle 'Gradle-6.2'
