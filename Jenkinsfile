@@ -1,5 +1,11 @@
 pipeline{
   agent any
+  environment{
+    Version = "10.2.3"
+  }
+  parameters{
+    string(name:'Version', defaultValue:'', description:'dep')
+  }
   tools{
   gradle 'Gradle-6.2'
   }
